@@ -9,7 +9,7 @@ strip.begin()
 
 while True:
 	for n in range(0, 60):
-		a = numpy.zeros(lib.LED_COUNT,3)
+		a = numpy.zeros([lib.LED_COUNT,3])
 		a[0:n, 0] = 255  
 		for i in range(lib.LED_COUNT):
 			strip.setPixelColor(i, Color(a[i,0],a[i,1],a[i,2]))
