@@ -13,17 +13,23 @@ def setPixelsWithArray(strip, a):
 		strip.setPixelColor(i, Color(int(a[i,0]), int(a[i,1]), int(a[i,2])))
 	strip.show()
 
+def normalizeArray(a):
+	return 255 * a/np.amax(a)
+	
+
 a = np.zeros([strip.numPixels(), 3])
 center = 30
 width  = 5
 for i in range(center-width, center+width+1):
 	distance = np.absolute(i-center)
 	distanceNorm = distance/width
-	a[i] = 255 - (distanceNorm*255)
+	a[i] = 1 - distanceNorm
 print(a)
 a = np.square(a)
 print(a)
-	
+a = normalizeArray(a)
+print(a)
+
 while True:
 	a = np.roll(a,1)
 	setPixelsWithArray(strip, a)
