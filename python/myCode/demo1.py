@@ -11,6 +11,6 @@ frame=0
 while True:
 	rval = frame % 255
 	for i in range(lib.LED_COUNT):
-		strip.setPixelColor(i, Color(rval, 0, 0)
+		strip.setPixelColor(i, Color(rval, 0, 0))
 	strip.show()
 	frame+=1
