@@ -18,12 +18,12 @@ def normalizeArray(a):
 	
 
 a = np.zeros([strip.numPixels(), 3])
-center = 30
-width  = 5
+center = 30.0
+width  = 5.0
 for i in range(center-width, center+width+1):
 	distance = np.absolute(i-center)
 	distanceNorm = distance/width
-	a[i] = 1 - distanceNorm
+	a[i,0] = 1.0 - distanceNorm
 print(a)
 a = np.square(a)
 print(a)
