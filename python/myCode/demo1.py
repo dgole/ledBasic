@@ -7,10 +7,13 @@ import numpy
 strip = Adafruit_NeoPixel(lib.LED_COUNT, lib.LED_PIN, lib.LED_FREQ_HZ, lib.LED_DMA, lib.LED_INVERT, lib.LED_BRIGHTNESS, lib.LED_CHANNEL, lib.LED_STRIP)
 strip.begin()
 
-frame=0
-while True:
-	rval = frame % 255
-	for i in range(lib.LED_COUNT):
-		strip.setPixelColor(i, Color(rval, 0, 0))
+def setPixelsWithArray(strip, a):
+	for i in range(strip.numPixels()):
+		strip.setPixelColor(i, Color(a[i,0], a[i,1], a[i,2]))
 	strip.show()
-	frame+=1
+
+while True:
+	a = numpy.zeros(strip.numPixels(), 3)
+	for n in range(0, strip.numPixels()):
+		a[0:n, 0] = n * (strip.numPixels()/255)
+		setPixelsWithArray(strip, a)
