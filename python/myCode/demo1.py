@@ -17,11 +17,11 @@ def normalizeArray(a):
 	return 255 * a/np.amax(a)
 	
 a = np.zeros([strip.numPixels(), 3])
-center = 30.0
-width  = 5.0
-for i in range(int(center-width), int(center+width+1)):
+center = 30
+width  = 5
+for i in range(center-width, center+width+1):
 	distance = np.absolute(i-center)
-	distanceNorm = distance/width
+	distanceNorm = float(distance)/float(width)
 	a[i,0] = 1.0 - distanceNorm
 a = np.square(a)
 a = normalizeArray(a)
