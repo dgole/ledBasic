@@ -76,9 +76,9 @@ if __name__ == '__main__':
 	strip.begin()
 	while True:
 		print ('Color wipe animations.')
-		colorWipe(strip, Color(1, 0, 0))  # Red wipe
-		colorWipe(strip, Color(0, 1, 0))  # Blue wipe
-		colorWipe(strip, Color(0, 0, 1))  # Green wipe
+		colorWipe(strip, Color(50, 0, 0))  # Red wipe
+		colorWipe(strip, Color(0, 50, 0))  # Blue wipe
+		colorWipe(strip, Color(0, 0, 50))  # Green wipe
 		#print ('Theater chase animations.')
 		#theaterChase(strip, Color(127, 127, 127))  # White theater chase
 		#theaterChase(strip, Color(127,   0,   0))  # Red theater chase
