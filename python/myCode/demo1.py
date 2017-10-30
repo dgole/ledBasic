@@ -1,7 +1,7 @@
 import time
 from neopixel import *
 import lib
-import numpy
+import numpy as np
 
 
 # Create NeoPixel object with appropriate configuration.
