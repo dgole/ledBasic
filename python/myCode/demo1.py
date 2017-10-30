@@ -9,7 +9,7 @@ strip.begin()
 
 def setPixelsWithArray(strip, a):
 	for i in range(strip.numPixels()):
-		strip.setPixelColor(i, Color(a[i,0], a[i,1], a[i,2]))
+		strip.setPixelColor(i, Color(int(a[i,0]), int(a[i,1]), int(a[i,2])))
 	strip.show()
 
 while True:
