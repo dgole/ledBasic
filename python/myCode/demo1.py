@@ -7,6 +7,6 @@ strip = Adafruit_NeoPixel(lib.LED_COUNT, lib.LED_PIN, lib.LED_FREQ_HZ, lib.LED_D
 strip.begin()
 while True:
 	for i in range(strip.numPixels()):
-	strip.setPixelColor(i, Color(255,0,0))
-	strip.show()
-	time.sleep(1)
+		strip.setPixelColor(i, Color(255,0,0))
+		strip.show()
+		time.sleep(1)
