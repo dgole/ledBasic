@@ -32,4 +32,4 @@ while True:
 	a = np.roll(a, plusOrMinus, axis=0)
 	setPixelsWithArray(strip, a)
 	time.sleep(0.1)
-	center+=1.0	
+	center+=plusOrMinus	
