@@ -24,7 +24,7 @@ print(a)
 a = np.square(a)
 print(a)
 	
-frame = 0
 while True:
-	setPixelsWithArray(strip, np.roll(a, frame))
-	frame+=1
+	a = np.roll(a,1)
+	setPixelsWithArray(strip, a)
+	
