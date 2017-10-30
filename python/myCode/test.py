@@ -75,7 +75,7 @@ if __name__ == '__main__':
 	# Intialize the library (must be called once before other functions).
 	strip.begin()
 	while True:
-		for i in range(0,255,5):
+		for i in range(0,255,1):
 			print(i)
 			colorWipe(strip, Color(i, 0, 0))  # Red wipe
 			colorWipe(strip, Color(i, 0, 0))  # Red wipe
