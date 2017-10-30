@@ -1,5 +1,6 @@
 import time
 from neopixel import *
+import numpy as np
 
 # LED strip configuration:
 LED_COUNT      = 60      # Number of LED pixels.
