@@ -75,9 +75,11 @@ if __name__ == '__main__':
 	# Intialize the library (must be called once before other functions).
 	strip.begin()
 	while True:
-		colorWipe(strip, Color(10, 0, 0))  # Red wipe
-		colorWipe(strip, Color(50, 0, 0))  # Red wipe
-		colorWipe(strip, Color(200, 0, 0))  # Red wipe
+		for i in range(0,255):
+			print(i)
+			colorWipe(strip, Color(i, 0, 0))  # Red wipe
+			colorWipe(strip, Color(i, 0, 0))  # Red wipe
+			colorWipe(strip, Color(i, 0, 0))  # Red wipe
     #colorWipe(strip, Color(0, 50, 0))  # Blue wipe
 		#colorWipe(strip, Color(0, 0, 50))  # Green wipe
 		#print ('Theater chase animations.')
