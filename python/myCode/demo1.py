@@ -26,8 +26,10 @@ for i in range(center-width, center+width+1):
 a = np.square(a)
 a = normalizeArray(a)
 
+plusOrMinus = 1
 while True:
-	a = np.roll(a,1,axis=0)
+	if center == 59 or center == 0: plusOrMinus*=-1
+	a = np.roll(a, plusOrMinus, axis=0)
 	setPixelsWithArray(strip, a)
 	time.sleep(0.1)
-	
+	center+=1.0	
