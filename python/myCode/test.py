@@ -76,7 +76,7 @@ if __name__ == '__main__':
 	strip.begin()
 	while True:
 		print ('Color wipe animations.')
-		colorWipe(strip, Color(10, 0, 0))  # Red wipe
+    colorWipe(strip, Color(10, 0, 0))  # Red wipe
     colorWipe(strip, Color(50, 0, 0))  # Red wipe
     colorWipe(strip, Color(200, 0, 0))  # Red wipe
 		#colorWipe(strip, Color(0, 50, 0))  # Blue wipe
