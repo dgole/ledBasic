@@ -11,6 +11,14 @@ LED_INVERT     = False   # True to invert the signal (when using NPN transistor 
 LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 
+def setPixelsWithArray(strip, a):
+	for i in range(strip.numPixels()):
+		strip.setPixelColor(i, Color(int(a[i,0]), int(a[i,1]), int(a[i,2])))
+	strip.show()
+
+def normalizeArray255(a):
+	return 255 * a/np.amax(a)
+
 def colorWipe(strip, color, wait_ms=50):
 	"""Wipe color across display a pixel at a time."""
 	for i in range(strip.numPixels()):
