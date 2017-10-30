@@ -74,12 +74,12 @@ if __name__ == '__main__':
 	strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
 	# Intialize the library (must be called once before other functions).
 	strip.begin()
-	while True:
-		for i in range(0,255,10):
-			print(i)
-			colorWipe(strip, Color(i, 0, 0))  # Red wipe
-			colorWipe(strip, Color(i, 0, 0))  # Red wipe
-			colorWipe(strip, Color(i, 0, 0))  # Red wipe
+	for i in range(strip.numPixels()): strip.setPixelColor(i, 255, 0, 0)
+	strip.show()
+	#while True:
+		#colorWipe(strip, Color(i, 0, 0))  # Red wipe
+		#colorWipe(strip, Color(i, 0, 0))  # Red wipe
+		#colorWipe(strip, Color(i, 0, 0))  # Red wipe
     #colorWipe(strip, Color(0, 50, 0))  # Blue wipe
 		#colorWipe(strip, Color(0, 0, 50))  # Green wipe
 		#print ('Theater chase animations.')
