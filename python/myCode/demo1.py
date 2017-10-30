@@ -9,4 +9,4 @@ while True:
 	for i in range(strip.numPixels()):
 		strip.setPixelColor(i, Color(255,0,0))
 		strip.show()
-		time.sleep(1)
+		#time.sleep(1)
