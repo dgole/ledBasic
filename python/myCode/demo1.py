@@ -32,4 +32,5 @@ print(a)
 while True:
 	a = np.roll(a,1,axis=0)
 	setPixelsWithArray(strip, a)
+	time.sleep(0.05)
 	
