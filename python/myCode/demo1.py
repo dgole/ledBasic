@@ -13,11 +13,11 @@ def setPixelsWithArray(strip, a):
 		strip.setPixelColor(i, Color(int(a[i,0]), int(a[i,1]), int(a[i,2])))
 	strip.show()
 
-a = numpy.zeros([strip.numPixels(), 3])
+a = np.zeros([strip.numPixels(), 3])
 center = 30
 width  = 5
 for i in range(center-width, center+width+1):
-	distance = numpy.absolute(i-center)
+	distance = np.absolute(i-center)
 	distanceNorm = distance/width
 	a[i] = 255 - (distanceNorm*255)
 print(a)
