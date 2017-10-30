@@ -8,6 +8,7 @@ strip = Adafruit_NeoPixel(lib.LED_COUNT, lib.LED_PIN, lib.LED_FREQ_HZ, lib.LED_D
 strip.begin()
 
 def setPixelsWithArray(strip, a):
+	a = a.astype(int)
 	for i in range(strip.numPixels()):
 		strip.setPixelColor(i, Color(a[i,0], a[i,1], a[i,2]))
 	strip.show()
