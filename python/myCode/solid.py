@@ -3,9 +3,9 @@ from neopixel import *
 import lib
 import sys
 
-c1 = sys.argv[1]
-c2 = sys.argv[2]
-c3 = sys.argv[3]
+c1 = int(sys.argv[1])
+c2 = int(sys.argv[2])
+c3 = int(sys.argv[3])
 
 strip = Adafruit_NeoPixel(lib.LED_COUNT, lib.LED_PIN, lib.LED_FREQ_HZ, lib.LED_DMA, lib.LED_INVERT, lib.LED_BRIGHTNESS, lib.LED_CHANNEL, lib.LED_STRIP)
 strip.begin()
