@@ -22,7 +22,7 @@ width  = 5
 for i in range(center-width, center+width+1):
 	distance = np.absolute(i-center)
 	distanceNorm = float(distance)/float(width)
-	a[i,0] = 1.0 - distanceNorm + 0.1
+	a[i,0] = 1.0 - distanceNorm + 0.2
 a = np.square(a)
 a = normalizeArray(a)
 
