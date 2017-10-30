@@ -16,7 +16,6 @@ def setPixelsWithArray(strip, a):
 def normalizeArray(a):
 	return 255 * a/np.amax(a)
 	
-
 a = np.zeros([strip.numPixels(), 3])
 center = 30.0
 width  = 5.0
@@ -31,6 +30,6 @@ a = normalizeArray(a)
 print(a)
 
 while True:
-	a = np.roll(a,1)
+	a = np.roll(a,1,axis=0)
 	setPixelsWithArray(strip, a)
 	
