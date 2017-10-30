@@ -23,14 +23,11 @@ for i in range(int(center-width), int(center+width+1)):
 	distance = np.absolute(i-center)
 	distanceNorm = distance/width
 	a[i,0] = 1.0 - distanceNorm
-print(a)
 a = np.square(a)
-print(a)
 a = normalizeArray(a)
-print(a)
 
 while True:
 	a = np.roll(a,1,axis=0)
 	setPixelsWithArray(strip, a)
-	time.sleep(0.05)
+	time.sleep(0.1)
 	
