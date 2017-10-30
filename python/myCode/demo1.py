@@ -19,7 +19,7 @@ width  = 5
 for i in range(center-width, center+width+1):
 	distance = numpy.absolute(i-center)
 	distanceNorm = distance/width
-	a[i] = 255 * (1.0/distanceNorm) 
+	a[i] = 255 - (distanceNorm*255)
 print(a)
 a = np.square(a)
 print(a)
