@@ -14,6 +14,6 @@ def setPixelsWithArray(strip, a):
 
 while True:
 	a = numpy.zeros([strip.numPixels(), 3])
-	for n in range(0, strip.numPixels()):
-		a[0:n, 0] = n * (255/strip.numPixels())
+	for val in range(0, 255):
+		a[:, 0] = val
 		setPixelsWithArray(strip, a)
