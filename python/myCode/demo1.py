@@ -31,5 +31,5 @@ while True:
 	if center == 59-width or center == 0+width: plusOrMinus*=-1
 	a = np.roll(a, plusOrMinus, axis=0)
 	setPixelsWithArray(strip, a)
-	time.sleep(0.1)
 	center+=plusOrMinus	
+	time.sleep(0.00)
