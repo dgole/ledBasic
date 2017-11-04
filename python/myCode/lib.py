@@ -27,6 +27,14 @@ def colorWipe(strip, color, wait_ms=50):
 		strip.show()
 		time.sleep(wait_ms/1000.0)
 
+def colorWipeSym(strip, color, wait_ms=50):
+	"""Wipe color across display a pixel at a time."""
+	for i in range(strip.numPixels()//2):
+		strip.setPixelColor(i, color)
+		strip.setPixelColor(strip.numPixels-i-1, color)
+		strip.show()
+		time.sleep(wait_ms/1000.0)
+		
 def theaterChase(strip, color, wait_ms=50, iterations=10):
 	"""Movie theater light style chaser animation."""
 	for j in range(iterations):
