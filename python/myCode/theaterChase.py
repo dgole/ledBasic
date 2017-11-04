@@ -9,6 +9,3 @@ while True:
 	lib.theaterChase(strip, Color(255, 0, 0), wait_ms=70)  # Red theater chase
 	lib.theaterChase(strip, Color(0, 255, 0), wait_ms=70)  # Blue theater chase
 	lib.theaterChase(strip, Color(0, 0, 255), wait_ms=70)  # Blue theater chase
-	#lib.rainbow(strip)
-	#lib.rainbowCycle(strip)
-	#lib.theaterChaseRainbow(strip)
