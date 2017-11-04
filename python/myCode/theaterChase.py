@@ -7,7 +7,7 @@ strip = Adafruit_NeoPixel(lib.LED_COUNT, lib.LED_PIN, lib.LED_FREQ_HZ, lib.LED_D
 strip.begin()
 while True:
 	#lib.theaterChase(strip, Color(127, 127, 127))  # White theater chase
-	#lib.theaterChase(strip, Color(127,   0,   0))  # Red theater chase
+	lib.theaterChase(strip, Color(127,   0,   0))  # Red theater chase
 	#lib.theaterChase(strip, Color(  0,   0, 127))  # Blue theater chase
 	#lib.rainbow(strip)
 	#lib.rainbowCycle(strip)
